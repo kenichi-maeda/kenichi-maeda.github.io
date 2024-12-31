@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a3f88a41.css",
+    "main.js": "/static/js/main.0155be4b.js",
+    "static/media/3d-demo.gif": "/static/media/3d-demo.71023419a8806437c7ed.gif",
+    "static/media/boston_safety.jpg": "/static/media/boston_safety.e2d663b0efa1505fc3d9.jpg",
+    "static/media/NASA_logo.png": "/static/media/NASA_logo.c58c2bab33b0a92f1b04.png",
+    "static/media/boston_weather.jpg": "/static/media/boston_weather.27bb28d4e87ad0dc839b.jpg",
+    "static/media/unet.png": "/static/media/unet.08e8308cd0916b142f0d.png",
+    "static/media/cancer.jpg": "/static/media/cancer.66b8304c4d90828cc8d4.jpg",
+    "static/media/dow.jpg": "/static/media/dow.1abfd511c835444957a4.jpg",
+    "static/media/llmp.png": "/static/media/llmp.d0bbad2cba2cf6a292e6.png",
+    "static/media/uni_rostock_logo.png": "/static/media/uni_rostock_logo.28ac02ca1cd58e1f3aec.png",
+    "static/media/headshot.jpg": "/static/media/headshot.55ed82453c1241a0e865.jpg",
+    "static/media/Math.jpg": "/static/media/Math.291c81d6901da189bbf3.jpg",
+    "static/media/online_banking.jpg": "/static/media/online_banking.c686bc0aa3178cbdbd78.jpg",
+    "static/media/station.jpeg": "/static/media/station.caa617d7a94be37bd8f2.jpeg",
+    "static/media/gafam.jpg": "/static/media/gafam.90128e20fb662dd4e469.jpg",
+    "static/media/currency.jpg": "/static/media/currency.7da00186c8cfbc760e76.jpg",
+    "static/media/umb_logo.png": "/static/media/umb_logo.26a8f0a26b54a5e7e314.png",
+    "index.html": "/index.html",
+    "main.a3f88a41.css.map": "/static/css/main.a3f88a41.css.map",
+    "main.0155be4b.js.map": "/static/js/main.0155be4b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3f88a41.css",
+    "static/js/main.0155be4b.js"
+  ]
+}
