@@ -1,0 +1,47 @@
+.education-section {
+    margin-bottom: 2rem;
+  }
+  
+  .education-section h2 {
+    font-family: Cambria, serif;
+    margin-bottom: 1rem;
+  }
+  
+  .education-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .education-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 1rem;
+  }
+  
+  .education-details {
+    flex: 1;
+  }
+  
+  .education-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: Cambria, serif;
+  }
+  
+  .education-institution {
+    font-weight: bold;
+    margin: 0.3rem 0;
+  }
+  
+  .education-dates {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-location {
+    font-style: italic;
+    color: #555;
+    margin: 0.2rem 0;
+  }

@@ -1,0 +1,43 @@
+.work-experience {
+    margin-bottom: 2rem;
+  }
+  
+  .work-experience h2 {
+    font-family: Cambria, serif;
+    margin-bottom: 1rem;
+  }
+  
+  .experience-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 1rem;
+  }
+  
+  .experience-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .experience-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: Cambria, serif;
+  }
+  
+  .experience-dates {
+    font-style: italic;
+    margin: 0.3rem 0;
+  }
+  
+  .experience-location {
+    font-style: italic;
+    color: #555;
+    margin: 0.2rem 0;
+  }
+  

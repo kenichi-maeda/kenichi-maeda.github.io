@@ -1,0 +1,29 @@
+.about-section {
+  padding: 2rem;
+  font-family: Cambria, serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-intro {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.about-profile-pic {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.about-text h2 {
+  margin: 0;
+}
+
+.about-text p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #444;
+}

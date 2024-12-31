@@ -1,0 +1,16 @@
+.contact-section {
+  padding: 2rem;
+  font-family: Cambria, serif;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-info {
+  margin-top: 2rem;
+}
+
+.contact-item {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
