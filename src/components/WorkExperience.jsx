@@ -13,15 +13,8 @@ function WorkExperience() {
       dates: "Jun 2024 - Aug 2024",
       description: (
         <>
-          Selected as a 2024 RISE Germany Scholar by the DAAD (German Academic Exchange Service), and contributed to the development of simulation software (
-          <a
-            href="https://github.com/SFB-ELAINE/OSS-DBSv2"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            OSS-DBSv2
-          </a>
-          ) for deep brain stimulation.
+          Selected as a 2024 RISE Germany Scholar by the DAAD (German Academic Exchange Service), and contributed to the development of 
+          simulation software for deep brain stimulation.
         </>
       ),
     },

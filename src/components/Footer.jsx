@@ -5,7 +5,7 @@ function Footer({ setActiveTab }) {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; 2024 Kenichi Maeda. All rights reserved.</p>
+        <p>&copy; 2025 Kenichi Maeda</p>
         <div className="footer-links">
           {/* Update the activeTab to "Contact" when this link is clicked */}
           <button className="footer-button"  onClick={() => setActiveTab("Contact")}>Contact</button>

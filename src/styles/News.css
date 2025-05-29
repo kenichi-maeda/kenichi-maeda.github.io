@@ -1,0 +1,19 @@
+.news-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-family: Cambria, serif;
+}
+
+.news-section h2 {
+  margin-bottom: 1rem;
+}
+
+.news-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.news-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}

@@ -1,9 +1,19 @@
 import React from "react";
 import "./../styles/Education.css";
 import umbLogo from "./../assets/images/umb_logo.png";
+import brownLogo from "./../assets/images/brown_logo.png";
 
 function Education() {
   const schools = [
+    {
+      logo: brownLogo,
+      degree: "Master of Science in Computer Science",
+      institution: "Brown Univerisity",
+      location: "Providence, RI",
+      dates: "2025 -",
+      description:
+        "Incoming student.",
+    },
     {
       logo: umbLogo,
       degree: "Bachelor of Science in Computer Science",

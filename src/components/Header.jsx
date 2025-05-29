@@ -7,7 +7,7 @@ function Header({ activeTab, setActiveTab }) {
       <div className="header-container">
         <div className="header-title">
           <h1>Kenichi Maeda</h1>
-          <p>Software Developer</p>
+          <br></br>
         </div>
         <nav className="nav-tabs">
           <button
@@ -15,6 +15,12 @@ function Header({ activeTab, setActiveTab }) {
             onClick={() => setActiveTab("About")}
           >
             About
+          </button>
+          <button
+            className={activeTab === "Research" ? "active" : ""}
+            onClick={() => setActiveTab("Research")}
+          >
+            Research
           </button>
           <button
             className={activeTab === "Projects" ? "active" : ""}
