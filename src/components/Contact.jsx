@@ -15,9 +15,6 @@ function Contact() {
           <strong>Email:</strong> kenichi.maeda121@gmail.com
         </div>
         <div className="contact-item">
-          <strong>Phone:</strong> +1 (617) 959-9448
-        </div>
-        <div className="contact-item">
           <strong>Location:</strong> Boston, MA
         </div>
       </div>

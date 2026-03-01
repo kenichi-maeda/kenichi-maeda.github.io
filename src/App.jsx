@@ -14,12 +14,14 @@ function App() {
   return (
     <div className="app">
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
-      
-      {/* Conditionally render based on the active tab */}
-      {activeTab === "About" && <About />}
-      {activeTab === "Research" && <Research />}
-      {activeTab === "Projects" && <Projects />}
-      {activeTab === "Contact" && <Contact />}
+
+      <main className="app-main">
+        {/* Conditionally render based on the active tab */}
+        {activeTab === "About" && <About />}
+        {activeTab === "Research" && <Research />}
+        {activeTab === "Projects" && <Projects />}
+        {activeTab === "Contact" && <Contact />}
+      </main>
 
       {/* Pass setActiveTab to Footer */}
       <Footer setActiveTab={setActiveTab} />

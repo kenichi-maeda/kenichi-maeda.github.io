@@ -17,11 +17,11 @@ function About() {
         <div className="about-text">
           <h2>About Me</h2>
           <p>
-            Hello! My name is Kenichi Maeda. I am passionate about machine learning, particularly its applications in medical
-            imaging and precision medicine. My interests also include data visualization, robotics, and data science. I received
-            a Bachelor of Science in Computer Science from the University of Massachusetts Boston, and I am currently pursuing a Master
-            of Science at Brown University. I enjoy bringing ideas to life through code and innovative solutions.
-            In my free time, I enjoy watching baseball and playing piano!
+            Hello! My name is Kenichi Maeda. I’m interested in machine learning, robotics, and data visualization, 
+            and I enjoy building intelligent systems that bridge data and real-world applications. I earned my B.S. in 
+            Computer Science from the University of Massachusetts Boston and am currently pursuing my M.S. at Brown University, 
+            where I continue to deepen my interest in artificial intelligence and robotics.
+            Outside of my academic work, I enjoy watching baseball and playing the piano.
           </p>
         </div>
       </div>

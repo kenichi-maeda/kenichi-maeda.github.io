@@ -1,32 +1,21 @@
 import React from "react";
 import "./../styles/Projects.css";
-import unetWBImage from "./../assets/images/unetWB.png";
-import unetImage from "./../assets/images/unet.png";
 import bostonSafetyImage from "./../assets/images/boston_safety.jpg";
 import spassDeutschImage from "./../assets/images/spassDeutsch.png";
+import riptaImage from "./../assets/images/RIPTA.png";
 import circleImage from "./../assets/images/circle.png";
-import heartImage from "./../assets/images/heart.png";
-import cancerImage from "./../assets/images/cancer.jpg";
 import demoImage from "./../assets/images/3d-demo.gif";
-import dowImage from "./../assets/images/dow.jpg";
-import stationImage from "./../assets/images/station.jpeg";
+import roadGraphPlusImage from "./../assets/images/RoadGraphPlus.png";
 
 
 function Projects() {
   const projects = [
     {
-      image: unetWBImage,
-      title: "Segmentation of White Blood Cells in H&E Images Using U-Net",
+      image: roadGraphPlusImage,
+      title: "RoadGraphPlus",
       description:
-        "Implemented a U-Net model to segment white blood cells from Hematoxylin and Eosin (H&E) images.",
-      link: "https://github.com/kenichi-maeda/SegWBC",
-    },
-    {
-      image: unetImage,
-      title: "U-Net Implementation for Retinal Blood Vessel Segmentation",
-      description:
-        "Implemented a U-Net model from scratch using PyTorch to achieve accurate segmentation of blood vessels in retinal fundus images.",
-      link: "https://github.com/kenichi-maeda/UNet",
+        "Used CNNs and GNNs to predict road graphs from satellite images.",
+      link: "https://github.com/kenichi-maeda/RoadGraphPlus",
     },
     {
       image: bostonSafetyImage,
@@ -43,6 +32,13 @@ function Projects() {
       link: "https://github.com/kenichi-maeda/SpassDeutsch",
     },
     {
+      image: riptaImage,
+      title: "RIPTA T",
+      description:
+        "Built a transit app for RIPTA to help riders navigate routes and trips.",
+      link: "https://github.com/kenichi-maeda/RIPTA_T",
+    },
+    {
       image: circleImage,
       title: "Geometric Circle Prediction",
       description:
@@ -50,39 +46,11 @@ function Projects() {
       link: "https://github.com/kenichi-maeda/Circle",
     },
     {
-      image: heartImage,
-      title: "Heart Rate Monitor",
-      description:
-        "Designed a convenient, secure, and easy-to-use device for heart rate monitoring.",
-      link: "https://github.com/kenichi-https://github.com/jongsoo1203/CS410-SP2025-HeartRateMonitor/Circle",
-    },
-    {
-      image: cancerImage,
-      title: "Breast-Cancer-Diagnosis-Model",
-      description:
-        "Implemented an ANN classfication model to predict breasr cancer using Tensorflow and Keras.",
-      link: "https://github.com/kenichi-maeda/Breast-Cancer-Diagnosis-Model",
-    },
-    {
       image: demoImage,
       title: "3D Shooting Game",
       description:
         "Created a game using Three.js that runs on any Web-connected devices.",
       link: "https://kenichi-maeda.github.io/CS460FinalProject/",
-    },
-    {
-      image: dowImage,
-      title: "Dow-Jones-Industrial-Average-Info",
-      description:
-        "Created an app that shows the list of the Dow Jones Industrial Average and its corresponding stock price data (e.g., volume, opening price).",
-      link: "https://github.com/kenichi-maeda/Dow-Jones-Industrial-Average-Info",
-    },
-    {
-      image: stationImage,
-      title: "MBTA Guide",
-      description:
-        "Implemented a program that displays the shortest route and time for a given two MBTA stations using the Dijkstra's Algorithm.",
-      link: "https://github.com/kenichi-maeda/Boston-Weather-App",
     },
 
   ];
