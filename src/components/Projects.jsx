@@ -1,10 +1,8 @@
 import React from "react";
 import "./../styles/Projects.css";
 import bostonSafetyImage from "./../assets/images/boston_safety.jpg";
-import spassDeutschImage from "./../assets/images/spassDeutsch.png";
-import riptaImage from "./../assets/images/RIPTA.png";
+import riptaImage from "./../assets/images/RIPTA_long.png";
 import circleImage from "./../assets/images/circle.png";
-import demoImage from "./../assets/images/3d-demo.gif";
 import roadGraphPlusImage from "./../assets/images/RoadGraphPlus.png";
 
 
@@ -25,13 +23,6 @@ function Projects() {
       link: "https://kenichi-maeda.github.io/cs617/final_project/",
     },
     {
-      image: spassDeutschImage,
-      title: "SpaßDeutsch",
-      description:
-        "Created a German language app using Kotlin and SQLite as the backend.",
-      link: "https://github.com/kenichi-maeda/SpassDeutsch",
-    },
-    {
       image: riptaImage,
       title: "RIPTA T",
       description:
@@ -45,14 +36,6 @@ function Projects() {
         "Designed and implemented a deep learning model to predict parameters of four circles formed by five random points on a 2D plane.",
       link: "https://github.com/kenichi-maeda/Circle",
     },
-    {
-      image: demoImage,
-      title: "3D Shooting Game",
-      description:
-        "Created a game using Three.js that runs on any Web-connected devices.",
-      link: "https://kenichi-maeda.github.io/CS460FinalProject/",
-    },
-
   ];
 
   return (
