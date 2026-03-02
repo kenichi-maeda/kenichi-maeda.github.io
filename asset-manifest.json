@@ -1,26 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.ebb7318b.css",
-    "main.js": "/static/js/main.39925347.js",
+    "main.js": "/static/js/main.bce5f9f5.js",
     "static/media/mesh.png": "/static/media/mesh.97979308ba5b75a41069.png",
-    "static/media/3d-demo.gif": "/static/media/3d-demo.71023419a8806437c7ed.gif",
     "static/media/boston_safety.jpg": "/static/media/boston_safety.e2d663b0efa1505fc3d9.jpg",
-    "static/media/RIPTA.png": "/static/media/RIPTA.9199171c288e56a1f2a2.png",
     "static/media/NASA_logo.png": "/static/media/NASA_logo.c58c2bab33b0a92f1b04.png",
     "static/media/llmp.png": "/static/media/llmp.d0bbad2cba2cf6a292e6.png",
     "static/media/uni_rostock_logo.png": "/static/media/uni_rostock_logo.28ac02ca1cd58e1f3aec.png",
     "static/media/headshot.jpg": "/static/media/headshot.55ed82453c1241a0e865.jpg",
+    "static/media/RIPTA_long.png": "/static/media/RIPTA_long.8642f5246c0dec94a97c.png",
     "static/media/brown_logo.png": "/static/media/brown_logo.b68adefa79f70b07f15e.png",
     "static/media/RoadGraphPlus.png": "/static/media/RoadGraphPlus.4719b1b871ce26f0b485.png",
     "static/media/circle.png": "/static/media/circle.57fd65bc98abd2a53b3d.png",
-    "static/media/spassDeutsch.png": "/static/media/spassDeutsch.21659df30005cb8c121a.png",
     "static/media/umb_logo.png": "/static/media/umb_logo.26a8f0a26b54a5e7e314.png",
     "index.html": "/index.html",
     "main.ebb7318b.css.map": "/static/css/main.ebb7318b.css.map",
-    "main.39925347.js.map": "/static/js/main.39925347.js.map"
+    "main.bce5f9f5.js.map": "/static/js/main.bce5f9f5.js.map"
   },
   "entrypoints": [
     "static/css/main.ebb7318b.css",
-    "static/js/main.39925347.js"
+    "static/js/main.bce5f9f5.js"
   ]
 }
