@@ -26,7 +26,7 @@ hr {
 table {
   td,
   th {
-    font-size: 1rem;
+    font-size: 0.90625rem;
     padding: 1px 1rem 1px 0;
   }
 
@@ -290,7 +290,7 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
-    font-size: 1.25rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -426,7 +426,7 @@ ul.task-list input[type="checkbox"] {
   justify-content: center;
   width: 44px;
   height: 44px;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   line-height: 1;
   cursor: pointer;
 
@@ -516,7 +516,7 @@ ul.task-list input[type="checkbox"] {
 // Footer
 footer.fixed-bottom {
   background-color: #424242;
-  font-size: 0.875rem;
+  font-size: 0.6875rem;
   line-height: 1.5;
 
   .container {
