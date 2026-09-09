@@ -1,0 +1,37 @@
+- title: Education
+  entries:
+    - organization: Brown University
+      dates: "2025–"
+      role: Master of Science in Computer Science
+      logo: brown_logo.png
+      research_focus: Dexterous hand manipulation; reinforcement learning and imitation learning.
+    - organization: University of Massachusetts Boston
+      dates: "2021–2025"
+      role: Bachelor of Science in Computer Science
+      logo: umb_logo.png
+      research_focus: Multimodal large language models and geometric mesh processing.
+- title: Work Experience
+  entries:
+    - organization: Amazon
+      dates: "June 2026 - August 2026"
+      role: Robotics Software Development Engineer Intern
+      location: Bellevue, WA
+      logo: amazon-lgo.png
+      logo_wide: true
+      details:
+        - Amazon Fulfillment Technology & Robotics
+    - organization: University of Rostock
+      dates: "June 2024 - August 2024"
+      role: Research Intern
+      location: Rostock, Germany
+      logo: uni_rostock_logo.png
+      details:
+        - Selected as a 2024 DAAD [RISE Germany](https://www.daad.de/rise/en/rise-germany/) Scholar.
+        - Contributed to simulation software for deep brain stimulation.
+    - organization: NASA Marshall Space Flight Center
+      dates: "June 2023 - August 2023"
+      role: Software Engineer Intern
+      location: Huntsville, AL
+      logo: NASA_logo.png
+      details:
+        - Contributed to the development of a quadcopter control system for autonomous flight.

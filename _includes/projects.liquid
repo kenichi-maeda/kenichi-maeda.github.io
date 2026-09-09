@@ -1,0 +1,20 @@
+{% assign project_url = project.redirect | default: project.demo | default: project.github %}
+<article class="project-card">
+  {% if project.img %}
+    <a class="project-card-preview" href="{{ project_url | escape }}" target="_blank" rel="noopener noreferrer" aria-label="Explore {{ project.title | escape }}">
+      <img src="{{ project.img | relative_url }}" alt="{{ project.title | escape }} preview" loading="lazy" width="480" height="300">
+    </a>
+  {% endif %}
+  <div class="project-card-body">
+    <h2><a href="{{ project_url | escape }}" target="_blank" rel="noopener noreferrer">{{ project.title | escape }}</a></h2>
+    <div class="project-card-description">{{ project.card_description | default: project.description | markdownify }}</div>
+    <div class="project-card-actions">
+      {% if project.github %}
+        <a class="project-card-button" href="{{ project.github }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      {% endif %}
+      {% if project.demo %}
+        <a class="project-card-button" href="{{ project.demo }}" target="_blank" rel="noopener noreferrer"><span>{{ project.demo_label | default: 'View Project' | escape }}</span> <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+      {% endif %}
+    </div>
+  </div>
+</article>

@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Kenichi Maeda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal academic website built with [al-folio v0.14.0](https://github.com/alshedivat/al-folio/tree/v0.14.0) and Jekyll. The theme is imported from its release archive, not forked. Its original MIT license is retained in `LICENSE`.
 
-## Available Scripts
+## Local preview
 
-In the project directory, you can run:
+Start Docker Desktop, then run from this directory:
 
-### `npm start`
+```powershell
+docker compose up
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open http://localhost:8080. Content changes rebuild automatically. After changing `_config.yml`, run `docker compose restart`. Stop with Ctrl+C, or `docker compose down` for a detached preview.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The source is mounted read-only; generated output stays inside the container. Responsive image generation is disabled so Jekyll does not write thumbnails into source files.
 
-### `npm test`
+## Editing content
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `_pages/about.md`: biography and homepage settings
+- `_data/profile_sections.yml`: homepage education and experience entries, including logos
+- `_data/publications.yml`: publication metadata, thumbnails, and resource links
+- `_pages/research.md`: publication page
+- `_pages/cv.md`: education and experience
+- `_projects/`: project card content and external links (individual pages are disabled)
+- `_news/`: dated homepage announcements
+- `_data/socials.yml`: contact links
+- `assets/img/`: photographs and project images
+- `_config.yml`: site identity, URL, and theme features
 
-### `npm run build`
+## Build and publication
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The `Build and deploy site` workflow builds with the same Docker image used locally. Pushes to `al-folio` and pull requests into `main` only upload a preview artifact; they never deploy. Pushes to `main` publish the successful build directly to GitHub Pages. The workflow can also be run manually; only runs on `main` deploy.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Before merging, set repository Settings > Pages > Source to GitHub Actions. If the `github-pages` environment restricts deployment branches, allow `main`. No personal access token or local Docker deployment is needed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See `MIGRATION.md` for publication steps. The previous React source is preserved on `react-backup`; this workflow does not write to `gh-pages`.

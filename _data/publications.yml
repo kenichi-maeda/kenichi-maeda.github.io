@@ -1,0 +1,50 @@
+- heading: "2026"
+  papers:
+    - title: "PaCX-MAE: Physiology-Augmented Chest X-Ray Masked Autoencoder"
+      badge: ICML
+      image: pax-mae.png
+      authors:
+        - Yancheng Liu
+        - Kenichi Maeda
+        - Manan Pancholy
+      venue: ICML 3rd Workshop on Multi-modal Foundation Models and Large Language Models for Life Sciences
+      year: 2026
+      links:
+        - label: OpenReview
+          url: https://openreview.net/forum?id=uexI49pco3
+        - label: arXiv
+          url: https://arxiv.org/abs/2606.01537
+        - label: PDF
+          url: https://arxiv.org/pdf/2606.01537
+      summary: >
+        Developed a cross-modal distillation framework that incorporates physiological information from paired ECG and laboratory data into chest X-ray representations during pretraining, requiring only chest X-rays at inference. Evaluation across nine benchmarks shows improved performance over domain-specific masked autoencoding, particularly on physiology-dependent tasks and with limited labeled data, while maintaining segmentation performance.
+- heading: "2025"
+  papers:
+    - title: Evaluating Graphical Perception with Multimodal LLMs
+      badge: PacificVis
+      image: llmp.png
+      authors:
+        - Rami Huu Nguyen
+        - Kenichi Maeda
+        - Mahsa Geshvadi
+        - Daniel Haehn
+      venue: IEEE Pacific Visualization Conference
+      year: 2025
+      links:
+        - label: IEEE Xplore
+          url: https://ieeexplore.ieee.org/document/11020989
+        - label: arXiv
+          url: https://arxiv.org/abs/2504.04221
+        - label: PDF
+          url: https://arxiv.org/pdf/2504.04221
+      summary: >
+        Evaluated pretrained and fine-tuned multimodal large language models on graphical-perception benchmarks, comparing model accuracy against established human baselines. Comparing pretrained and fine-tuned models with human performance reveals that the models outperform humans on some tasks but fall short on others.
+- heading: Work in Progress
+  papers:
+    - title: Comparative Analysis of Mesh Intersection Repair Methods
+      badge: In Progress
+      image: mesh.png
+      authors:
+        - Kenichi Maeda
+        - Daniel Haehn
+        - Sumientra Rampersad

@@ -1,0 +1,122 @@
+.projects {
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+
+    &:hover,
+    &:focus-within {
+      border-color: var(--global-theme-color);
+      box-shadow: 0 3px 12px rgb(0 0 0 / 8%);
+    }
+  }
+
+  .project-card-preview {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 8 / 5;
+    padding: 0.75rem;
+    background: #fff;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    img {
+      position: absolute;
+      inset: 0.75rem;
+      width: calc(100% - 1.5rem);
+      height: calc(100% - 1.5rem);
+      object-fit: contain;
+    }
+  }
+
+  .project-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.25rem;
+
+    h2 {
+      font-size: 1.3125rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 0 0 0.65rem;
+
+      a {
+        color: var(--global-text-color);
+
+        &:hover {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  .project-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+
+  .project-card-description a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .project-card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 36px;
+    padding: 0.25rem 0.65rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 3px;
+    color: var(--global-text-color);
+    font-family: Roboto, sans-serif;
+    font-size: 0.8125rem;
+    white-space: nowrap;
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+    }
+  }
+
+  .project-card a:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: -2px;
+  }
+
+  @media (max-width: 767px) {
+    .project-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-card {
+      transition: none;
+    }
+  }
+}
