@@ -34,11 +34,19 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: $max-content-width;
+  max-width: 760px;
+}
+
+.container.page-shell {
+  margin-top: 2rem !important;
 }
 
 [role="main"] {
   font-family: "Merriweather", Georgia, serif;
+
+  .post-title {
+    font-size: 1.875rem;
+  }
 }
 
 // Profile
