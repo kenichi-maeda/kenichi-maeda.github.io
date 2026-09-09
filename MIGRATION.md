@@ -21,8 +21,11 @@ The CV is an HTML page; the source site did not provide a PDF CV. No new credent
 
 1. Review the local preview at http://localhost:8080, including the mobile layout, project links, contact email, and research status.
 2. Commit and push the `al-folio` branch when ready. Inspect the build workflow's preview artifact.
-3. Add a deployment workflow restricted to pushes on `main`, building with the same Docker image and publishing `_site` to `gh-pages`. Confirm GitHub Pages uses `gh-pages` as its source before enabling deployment.
-4. Merge the reviewed migration into `main` and allow that workflow to publish. Do not run the previous React `npm run deploy` command.
+3. In repository Settings > Pages, change Source to GitHub Actions. If Settings > Environments > github-pages restricts deployment branches, allow `main`.
+4. Merge the reviewed migration into `main`. The `Build and deploy site` workflow builds with the same Docker image and publishes `_site` directly through GitHub Pages after a successful build. Do not run the previous React `npm run deploy` command.
+5. Wait for the deploy job to finish, then check the live site. If setup was incomplete, rerun the workflow on `main` after correcting the settings.
+
+Pushes to `al-folio` and pull requests never deploy. The previous React source is backed up on `react-backup`, and this workflow leaves the existing `gh-pages` branch untouched.
 
 The production configuration is `url: https://kenichi-maeda.github.io` with an empty `baseurl`. A preview hosted under a separate repository path needs its own baseurl override.
 

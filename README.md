@@ -19,9 +19,9 @@ The source is mounted read-only; generated output stays inside the container. Re
 - `_pages/about.md`: biography and homepage settings
 - `_data/profile_sections.yml`: homepage education and experience entries, including logos
 - `_data/publications.yml`: publication metadata, thumbnails, and resource links
-- `_pages/research.md`: publication page introduction and talks
+- `_pages/research.md`: publication page
 - `_pages/cv.md`: education and experience
-- `_projects/`: individual project pages
+- `_projects/`: project card content and external links (individual pages are disabled)
 - `_news/`: dated homepage announcements
 - `_data/socials.yml`: contact links
 - `assets/img/`: photographs and project images
@@ -29,6 +29,8 @@ The source is mounted read-only; generated output stays inside the container. Re
 
 ## Build and publication
 
-The `al-folio` branch workflow builds the site and uploads a preview artifact. It does not deploy. Nothing is published merely by pushing this branch.
+The `Build and deploy site` workflow builds with the same Docker image used locally. Pushes to `al-folio` and pull requests into `main` only upload a preview artifact; they never deploy. Pushes to `main` publish the successful build directly to GitHub Pages. The workflow can also be run manually; only runs on `main` deploy.
 
-See `MIGRATION.md` for review and publication steps. The previous React site remains in the `main` branch's Git history.
+Before merging, set repository Settings > Pages > Source to GitHub Actions. If the `github-pages` environment restricts deployment branches, allow `main`. No personal access token or local Docker deployment is needed.
+
+See `MIGRATION.md` for publication steps. The previous React source is preserved on `react-backup`; this workflow does not write to `gh-pages`.

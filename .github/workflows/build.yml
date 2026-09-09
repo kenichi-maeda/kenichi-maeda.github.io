@@ -1,19 +1,26 @@
-name: Build al-folio preview
+name: Build and deploy site
 
 on:
   push:
-    branches: [al-folio]
+    branches: [al-folio, main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: site-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
       - name: Build site
         run: >-
           docker run --rm
@@ -23,7 +30,30 @@ jobs:
           --entrypoint bundle
           amirpourmand/al-folio:v0.14.0
           exec jekyll build --trace
-      - uses: actions/upload-artifact@v4
+      - name: Upload preview
+        if: github.ref != 'refs/heads/main' || github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v6
         with:
           name: al-folio-preview
           path: _site
+          if-no-files-found: error
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
