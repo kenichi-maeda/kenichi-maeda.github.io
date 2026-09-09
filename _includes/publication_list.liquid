@@ -1,0 +1,44 @@
+<div class="publication-catalog">
+  {% for group in site.data.publications %}
+    <section class="publication-group" aria-labelledby="publications-{{ group.heading | slugify }}">
+      <h2 class="publication-group-heading" id="publications-{{ group.heading | slugify }}">{{ group.heading | escape }}</h2>
+      {% for paper in group.papers %}
+        <article class="publication-entry" aria-labelledby="paper-{{ paper.title | slugify }}">
+          <div class="publication-preview">
+            <span class="publication-badge{% if paper.badge == 'In Progress' %} publication-badge--in-progress{% endif %}">{{ paper.badge | escape }}</span>
+            {% if paper.image %}
+              <img src="{{ paper.image | prepend: '/assets/img/' | relative_url }}" alt="Preview of {{ paper.title | escape }}" loading="lazy" width="160" height="110">
+            {% endif %}
+          </div>
+          <div class="publication-text">
+            <h3 id="paper-{{ paper.title | slugify }}">{{ paper.title | escape }}</h3>
+            {% if paper.authors %}
+              <p class="publication-authors">
+                {% for author in paper.authors %}
+                  {% if author == 'Kenichi Maeda' %}<strong>{{ author }}</strong>{% else %}{{ author | escape }}{% endif %}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+              </p>
+            {% endif %}
+            {% if paper.venue %}
+              <p class="publication-venue"><em>{{ paper.venue | escape }}</em>{% if paper.year %}, {{ paper.year }}{% endif %}</p>
+            {% endif %}
+            {% if paper.links or paper.summary %}
+              <div class="publication-links" aria-label="Resources for {{ paper.title | escape }}">
+                {% for link in paper.links %}
+                  <a href="{{ link.url | escape }}" class="publication-button" target="_blank" rel="noopener noreferrer">{{ link.label | escape }}</a>
+                {% endfor %}
+                {% if paper.summary %}
+                  <button type="button" class="publication-button publication-summary-toggle" aria-expanded="false" aria-controls="summary-{{ paper.title | slugify }}">Summary</button>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% if paper.summary %}
+              <div class="publication-summary" id="summary-{{ paper.title | slugify }}" hidden>{{ paper.summary | markdownify }}</div>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </section>
+  {% endfor %}
+</div>
+<script defer src="{{ '/assets/js/publication-summary.js' | relative_url | bust_file_cache }}"></script>

@@ -1,0 +1,41 @@
+<div class="profile-sections">
+  {% for section in site.data.profile_sections %}
+    <section class="profile-section profile-section--{{ section.title | slugify }}" aria-labelledby="{{ section.title | slugify }}">
+      <h2 id="{{ section.title | slugify }}">{{ section.title | escape }}</h2>
+      {% for entry in section.entries %}
+        <div class="profile-entry">
+          <div class="profile-entry-text">
+            <div class="profile-entry-header">
+              <h3>{{ entry.organization | escape }}</h3>
+              <span class="profile-entry-dates">{{ entry.dates | escape }}</span>
+            </div>
+            {% if entry.role %}
+              <p class="profile-entry-role">{{ entry.role | escape }}</p>
+            {% endif %}
+            {% if entry.location %}
+              <p class="profile-entry-location"><em>{{ entry.location | escape }}</em></p>
+            {% endif %}
+            {% if entry.research_focus %}
+              <p><strong>Research focus:</strong> {{ entry.research_focus | escape }}</p>
+            {% endif %}
+            {% if entry.details %}
+              <div class="profile-entry-description">
+                {% for detail in entry.details %}
+                  {{ detail | markdownify }}
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+          <img
+            class="profile-entry-logo{% if entry.logo_wide %} profile-entry-logo--wide{% endif %}"
+            src="{{ entry.logo | prepend: '/assets/img/' | relative_url }}"
+            alt="{{ entry.organization | escape }} logo"
+            loading="lazy"
+            width="140"
+            height="100"
+          >
+        </div>
+      {% endfor %}
+    </section>
+  {% endfor %}
+</div>

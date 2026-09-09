@@ -1,0 +1,224 @@
+.container.about-container {
+  max-width: 950px;
+}
+
+.about-page {
+  max-width: 920px;
+  margin-inline: auto;
+  font-size: 1.125rem;
+  line-height: 1.65;
+
+  .post-title {
+    font-size: 2.75rem;
+  }
+
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2.125rem;
+  }
+
+  .news th,
+  .news td {
+    font-size: 1.125rem;
+  }
+
+  .profile {
+    max-width: 280px;
+  }
+
+  .desc {
+    color: var(--global-theme-color);
+  }
+
+  .social {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 4rem;
+      line-height: 1;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 72px;
+        height: 72px;
+
+        &:focus-visible {
+          outline: 2px solid var(--global-theme-color);
+          outline-offset: 4px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  .profile-sections {
+    clear: both;
+    padding-top: 1.5rem;
+  }
+
+  .profile-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .profile-section h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .profile-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 140px;
+    align-items: center;
+    gap: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .profile-entry h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  .profile-entry p {
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-entry-logo {
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+    background: white;
+    border-radius: 4px;
+    padding: 0.4rem;
+  }
+
+  .profile-section--education,
+  .profile-section--work-experience {
+    .profile-entry {
+      grid-template-columns: minmax(0, 1fr) 180px;
+      margin-bottom: 2.25rem;
+    }
+
+    .profile-entry-logo {
+      width: 180px;
+      height: 150px;
+    }
+  }
+
+  .profile-section .profile-entry-logo.profile-entry-logo--wide {
+    height: auto;
+  }
+
+  .profile-section--education,
+  .profile-section--work-experience {
+    .profile-entry {
+      align-items: start;
+      row-gap: 0.5rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .profile-entry-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.25rem 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-entry-dates {
+      flex-shrink: 0;
+      color: var(--global-text-color-light);
+      font-size: 1rem;
+    }
+
+    .profile-entry-role {
+      margin-bottom: 0.25rem;
+      line-height: 1.5;
+    }
+
+    .profile-entry-location {
+      font-size: 1rem;
+      line-height: 1.5;
+
+      em {
+        color: var(--global-text-color-light);
+      }
+    }
+
+    .profile-entry-description {
+      margin-top: 0.875rem;
+    }
+
+    .profile-entry-description p:last-child {
+      margin-bottom: 0;
+    }
+
+    .profile-entry-logo {
+      height: auto;
+      max-height: 150px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .social .contact-icons {
+      gap: 0.5rem;
+
+      a {
+        width: 64px;
+      }
+    }
+
+    .profile {
+      float: none !important;
+      width: min(70%, 240px);
+      margin: 0 auto 1.5rem;
+    }
+
+    .profile-entry {
+      grid-template-columns: minmax(0, 1fr) 72px;
+      gap: 1rem;
+    }
+
+    .profile-entry-logo {
+      width: 72px;
+      height: 72px;
+    }
+
+    .profile-section--education,
+    .profile-section--work-experience {
+      .profile-entry {
+        grid-template-columns: minmax(0, 1fr) 96px;
+      }
+
+      .profile-entry-logo {
+        width: 96px;
+        height: 110px;
+      }
+    }
+
+    .profile-section--education,
+    .profile-section--work-experience {
+      .profile-entry-header {
+        flex-direction: column;
+      }
+
+      .profile-entry-logo {
+        height: auto;
+        max-height: 110px;
+      }
+    }
+  }
+}
